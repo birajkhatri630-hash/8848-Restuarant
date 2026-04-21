@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #e63946;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #222;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f1faee;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px 20px;
+  background: #e63946;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #d62828;
+}
+
+/* ABOUT */
+.about {
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* MENU */
+.section-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu, .specials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Section styling */
+.section-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu, .specials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+  /* Gallery section */
+.gallery-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Grid layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Image container */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Images */
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+
+  /* Smooth transition */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover effects */
+.gallery-item:hover img {
+  transform: scale(1.1);        /* zoom */
+  filter: brightness(80%);      /* darken */
+}
+
+/* Optional overlay text effect */
+.gallery-item::after {
+  content: "View Dish";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Fade-in animation when page loads */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Delay animation for each item */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* CONTACT */
+.contact-section {
+  background: #f1faee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
